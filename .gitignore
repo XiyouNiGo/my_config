@@ -1,0 +1,9 @@
+.idea
+cmake-build-debug
+.vscode
+XiyouNiGo
+try.*
+*.drawio
+compile.sh
+*.out
+nigo*
