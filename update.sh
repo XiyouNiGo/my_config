@@ -12,6 +12,7 @@ cp ~/.vimrc.custom.config .
 cp ~/.vimrc.custom.plugins .
 # fish
 cp ~/.config/fish/config.fish .
+cp ~/.config/fish/functions/fish_prompt.fish .
 
 # push to hub
 git add -A
