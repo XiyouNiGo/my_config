@@ -367,7 +367,7 @@ set clipboard=unnamedplus
 " Ctrl + C 选中状态下复制
 vnoremap <C-c> "+y
 " Ctrl + V 粘贴剪切板中的内容
-map <C-v> "+p
+" map <C-v> "+p
 " 保存退出
 map <C-w> :wqa<CR>
 " 一键保存和编译 
