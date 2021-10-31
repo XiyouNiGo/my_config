@@ -129,14 +129,14 @@ Plug 'chxuan/change-colorscheme'
 Plug 'chxuan/prepare-code'
 Plug 'chxuan/vim-buffer'
 Plug 'chxuan/vimplus-startify'
-Plug 'chxuan/tagbar'
+Plug 'preservim/tagbar'
 Plug 'Valloric/YouCompleteMe'
 Plug 'Yggdroot/LeaderF'
 Plug 'mileszs/ack.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'haya14busa/incsearch.vim'
 Plug 'jiangmiao/auto-pairs'
-Plug 'scrooloose/nerdtree'
+Plug 'preservim/nerdtree'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'godlygeek/tabular'
@@ -334,7 +334,7 @@ let g:Lf_WildIgnore = {
 let g:Lf_UseCache = 0
 
 " ack
-" nnoremap <leader>F :Ack!<space>
+nnoremap <leader>F :Ack!<space>
 
 " echodoc.vim
 let g:echodoc_enable_at_startup = 1
@@ -359,91 +359,8 @@ if filereadable(expand($HOME . '/.vimrc.custom.config'))
     source $HOME/.vimrc.custom.config
 endif
 
-"Mine
+" Quit
+nnoremap <leader>q :wqa<cr>
 
-" 剪切板
-set clipboard=unnamed
-set clipboard=unnamedplus
-" Ctrl + C 选中状态下复制
-vnoremap <C-c> "+y
-" Ctrl + V 粘贴剪切板中的内容
-" map <C-v> "+p
-" 保存退出
-map <C-w> :wqa<CR>
-" 一键保存和编译 
-" map <F5> :call CompileRunGcc()<CR>
-
-" func! CompileRunGcc()
-"     exec "w" 
-"     if &filetype == 'c' 
-"         exec '!g++ % -o %<'
-"         exec '!./%<'
-"     elseif &filetype == 'cpp'
-"         exec '!g++ % -o %<'
-"         exec '!./%<'
-"     elseif &filetype == 'python'
-"         exec '!python %'
-"     elseif &filetype == 'sh'
-"         :!bash %
-"     elseif &filetype == 'java'
-"         exec '!javac %'
-"         exec '!java %'
-"     endif                                                                              
-" endfunc 
-" 一键编译
-" func! CompileGcc()
-"     exec "w"
-"     let compilecmd="!gcc "
-"     let compileflag="-o %< "
-"     if search("mpi\.h") != 0
-"         let compilecmd = "!mpicc "
-"     endif
-"     if search("glut\.h") != 0
-"         let compileflag .= " -lglut -lGLU -lGL "
-"     endif
-"     if search("cv\.h") != 0
-"         let compileflag .= " -lcv -lhighgui -lcvaux "
-"     endif
-"     if search("omp\.h") != 0
-"         let compileflag .= " -fopenmp "
-"     endif
-"     if search("math\.h") != 0
-"         let compileflag .= " -lm "
-"     endif
-"     exec compilecmd." % ".compileflag
-" endfunc
-" func! CompileGpp()
-"     exec "w"
-"     let compilecmd="!g++ "
-"     let compileflag="-o %< "
-"     if search("mpi\.h") != 0
-"         let compilecmd = "!mpic++ "
-"     endif
-"     if search("glut\.h") != 0
-"         let compileflag .= " -lglut -lGLU -lGL "
-"     endif
-"     if search("cv\.h") != 0
-"         let compileflag .= " -lcv -lhighgui -lcvaux "
-"     endif
-"     if search("omp\.h") != 0
-"         let compileflag .= " -fopenmp "
-"     endif
-"     if search("math\.h") != 0
-"         let compileflag .= " -lm "
-"     endif
-"     exec compilecmd." % ".compileflag
-" endfunc
-" func! CompileCode()
-"         exec "w"
-"         if &filetype == "cpp"
-"                 exec "call CompileGpp()"
-"         elseif &filetype == "c"
-"                 exec "call CompileGcc()"
-"         endif
-"     endfunc
-" map <F8> :call CompileCode()<CR>
-" imap <F8> <ESC>:call CompileCode()<CR>
-" vmap <F8> <ESC>:call CompileCode()<CR>
-
-" clang-format
-let g:clang_format#code_style="google"
+" Clang-format
+nnoremap <leader>c :ClangFormat<cr>
