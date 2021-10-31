@@ -334,7 +334,7 @@ let g:Lf_WildIgnore = {
 let g:Lf_UseCache = 0
 
 " ack
-nnoremap <leader>F :Ack!<space>
+" nnoremap <leader>F :Ack!<space>
 
 " echodoc.vim
 let g:echodoc_enable_at_startup = 1
@@ -445,5 +445,5 @@ map <C-w> :wqa<CR>
 " imap <F8> <ESC>:call CompileCode()<CR>
 " vmap <F8> <ESC>:call CompileCode()<CR>
 
-noremap <silent><f5> :w<cr>:AsyncTask file-build<cr>:AsyncTask file-run<cr>
-noremap <silent><f9> :AsyncTask file-build<cr>
+" clang-format
+let g:clang_format#code_style="google"
