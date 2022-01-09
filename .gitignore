@@ -8,3 +8,4 @@ try.*
 compile.sh
 *.out
 nigo*
+.obsidian

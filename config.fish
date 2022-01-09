@@ -37,6 +37,7 @@ alias glg='git log -n 5 --graph'
 alias gdb='gdb -quiet'
 alias ls='exa --icons'
 alias ll='exa -l --icons'
+alias grep='grep --color'
 
 # software
 alias es='sudo daemonize /usr/bin/unshare --fork --pid --mount-proc /lib/systemd/systemd --system-unit=basic.target & exec sudo nsenter -t (pidof systemd) -a su - $LOGNAME'
