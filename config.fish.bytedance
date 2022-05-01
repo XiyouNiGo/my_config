@@ -40,6 +40,7 @@ alias gdb='gdb -quiet'
 alias grep='grep --color'
 alias t='tmux'
 alias p='prefix'
+alias j='autojump'
 
 # greeting
 set fish_greeting 'Talk is cheap, show me the code.'
@@ -52,3 +53,11 @@ set -gx PATH $PATH $HOME/.krew/bin
 # MacOS
 set -gx PATH $PATH /opt/local/bin
 set -gx PATH $PATH /opt/local/sbin
+
+# autojump
+begin
+    set --local AUTOJUMP_PATH $HOME/.autojump/share/autojump/autojump.fish
+        if test -e $AUTOJUMP_PATH
+                source $AUTOJUMP_PATH
+        end
+end
