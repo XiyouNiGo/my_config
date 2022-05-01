@@ -366,4 +366,4 @@ nnoremap <leader>q :wqa<cr>
 nnoremap <leader>c :ClangFormat<cr>
 
 " Save
-nnoremap <c-w> :wqa<cr>
+" nnoremap <c-w> :wqa<cr>

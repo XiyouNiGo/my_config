@@ -38,6 +38,8 @@ alias gdb='gdb -quiet'
 # alias ls='exa --icons'
 # alias ll='exa -l --icons'
 alias grep='grep --color'
+alias t='tmux'
+alias p='prefix'
 
 # greeting
 set fish_greeting 'Talk is cheap, show me the code.'
@@ -46,3 +48,7 @@ set fish_greeting 'Talk is cheap, show me the code.'
 alias virtctl='kubectl virt'
 alias krew=='kubectl krew'
 set -gx PATH $PATH $HOME/.krew/bin
+
+# MacOS
+set -gx PATH $PATH /opt/local/bin
+set -gx PATH $PATH /opt/local/sbin
