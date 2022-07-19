@@ -13,9 +13,10 @@ cp ~/.vimrc.custom.plugins .
 # fish
 cp ~/.config/fish/config.fish .
 cp ~/.config/fish/functions/fish_prompt.fish .
-#prepare-code
+# bash 
+cp ~/.inputrc .inputrc
+# prepare-code
 cp ~/.vim/plugged/prepare-code/snippet/* snippet
-
 # push to hub
 git add -A
 git commit -m "update config files"

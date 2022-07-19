@@ -13,6 +13,7 @@ cp .vimrc.custom.plugins ~/.vimrc.custom.plugins
 # fish
 cp config.fish ~/.config/fish/config.fish
 cp fish_prompt.fish ~/.config/fish/functions/fish_prompt.fish
-
+# bash
+cp .inputrc ~/.inputrc
 # prepare-code
 cp snippet/* ~/.vim/plugged/prepare-code/snippet/*
