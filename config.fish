@@ -35,8 +35,9 @@ alias gpl='git pull origin (git symbolic-ref --short -q HEAD) --ff-only'
 alias gl='git log -n 3'
 alias glg='git log -n 5 --graph'
 alias gdb='gdb -quiet'
-alias ls='exa --icons'
-alias ll='exa -l --icons'
+alias gsy='gc matser && gfo && grh origin/master && gc - && grh master && gcp'
+# alias ls='exa --icons'
+# alias ll='exa -l --icons'
 alias grep='grep --color'
 
 # software
