@@ -1,0 +1,7 @@
+#!/usr/bin/expect -f
+set timeout 30
+set passwd "passwd"
+spawn kinit user
+expect user
+send "$passwd\r"
+interact
