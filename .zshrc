@@ -1,3 +1,8 @@
+hostip=$(cat /etc/resolv.conf |grep -oP '(?<=nameserver\ ).*')
+export https_proxy="http://$hostip:1080"
+export http_proxy="http://$hostip:1080"
+export all_proxy="socks5://$hostip:1080"
+
 source ~/.antigen.zsh
 antigen use oh-my-zsh
 
