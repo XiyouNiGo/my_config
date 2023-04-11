@@ -47,8 +47,11 @@ alias gm="git merge"
 alias grh='git reset --hard'
 alias grb='git rebase'
 alias gpo='git push origin $(git symbolic-ref --short -q HEAD)'
+alias gfo='git fetch origin $(git symbolic-ref --short -q HEAD)'
 alias gpl='git pull origin $(git symbolic-ref --short -q HEAD) --ff-only'
 alias gl='git log -n 3'
 alias glg='git log -n 5 --graph'
+alias gsync='git fetch origin $(git symbolic-ref --short -q HEAD) && git reset --hard origin/$(git symbolic-ref --short -q HEAD)'
+alias vendor='go mod tidy && go mod vendor'
 
 expect -f $HOME/.config/fish/kinit.auto > /dev/null
