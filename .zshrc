@@ -55,3 +55,4 @@ alias gsync='git fetch origin $(git symbolic-ref --short -q HEAD) && git reset -
 alias vendor='go mod tidy && go mod vendor'
 
 expect -f $HOME/.config/fish/kinit.auto > /dev/null
+source <(kubectl completion zsh)
