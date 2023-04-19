@@ -1,3 +1,4 @@
+source <(kubectl completion zsh)
 hostip=$(cat /etc/resolv.conf |grep -oP '(?<=nameserver\ ).*')
 export https_proxy="http://$hostip:1080"
 export http_proxy="http://$hostip:1080"
@@ -55,4 +56,3 @@ alias gsync='git fetch origin $(git symbolic-ref --short -q HEAD) && git reset -
 alias vendor='go mod tidy && go mod vendor'
 
 expect -f $HOME/.config/fish/kinit.auto > /dev/null
-source <(kubectl completion zsh)
