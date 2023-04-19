@@ -1,4 +1,7 @@
 source <(kubectl completion zsh)
+source <(kind completion zsh)
+source <(helm completion zsh)
+
 hostip=$(cat /etc/resolv.conf |grep -oP '(?<=nameserver\ ).*')
 export https_proxy="http://$hostip:1080"
 export http_proxy="http://$hostip:1080"
