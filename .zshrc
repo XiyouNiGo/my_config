@@ -1,8 +1,5 @@
 export PATH=/opt/homebrew/bin:$PATH
-export PYENV_ROOR="$HOME/.pyenv"
-export PATH=$PYENV_ROOT/shims:$PATH
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 source $HOME/my_config/antigen.zsh
 antigen use oh-my-zsh
@@ -14,8 +11,8 @@ antigen bundle web-search
 antigen bundle colored-man-pages
 antigen bundle copypath
 antigen bundle copyfile
+antigen bundle autojump
 
-antigen bundle docker
 antigen bundle brew
 
 antigen bundle laggardkernel/git-ignore
@@ -59,9 +56,12 @@ alias glg='git log -n 5 --graph'
 alias gsync='git fetch origin $(git symbolic-ref --short -q HEAD) && git reset --hard origin/$(git symbolic-ref --short -q HEAD)'
 alias vendor='go mod tidy && go mod vendor'
 alias python='python3'
+alias kc='kubectx'
+alias kn='kubens'
 
 expect -f $HOME/.kinit.auto > /dev/null
 
 source <(kubectl completion zsh)
 source <(kind completion zsh)
 source <(helm completion zsh)
+source <(docker completion zsh)
